@@ -2,7 +2,7 @@
 	"name": "fcc-learn-node-with-express",
 	"author": "Alexandro Christian Wijaya",
 	"description": "A project that does something awesome",
-	"keywords": ["descriptive", "express", "freecodecamp"],
+	"keywords": ["boilerplate", "express", "freecodecamp"],
 	"license": "MIT",
 	"version": "0.1.0",
 	"dependencies": {
