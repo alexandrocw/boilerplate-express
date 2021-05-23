@@ -8,9 +8,13 @@ console.log("Hello World");
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Query string mounting
-app.get("/name", (req, res) => {
+app.route("/name")
+   .get((req, res) => {
     res.send({ name: req.query.first + " " + req.query.last })
-})
+   })
+   .post((req, res) => {
+    res.send({ name: req.body.first + " " + req.body.last });
+   })
 
 // Echo server
 app.get("/:word/echo", (req, res) => {
