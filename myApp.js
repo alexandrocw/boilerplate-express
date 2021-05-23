@@ -1,7 +1,11 @@
 var express = require('express');
+var bodyParser = require("body-parser")
 var app = express();
 
 console.log("Hello World");
+
+// Body parser
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Query string mounting
 app.get("/name", (req, res) => {
