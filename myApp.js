@@ -3,6 +3,13 @@ var app = express();
 
 console.log("Hello World");
 
+// Echo server
+app.get("/:word/echo", (req, res) => {
+    res.send({ echo: req.params.word })
+})
+
+
+// Get time data
 app.get("/now", (req, res, next) => {
     req.time = new Date().toString();
     next();
@@ -10,6 +17,7 @@ app.get("/now", (req, res, next) => {
     res.send({ time: req.time })
 })
 
+// Logger
 app.use("/", (req, res, next) => {
     console.log(req.method + " " + req.path + " - " + req.ip);
     next()
