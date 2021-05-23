@@ -3,6 +3,11 @@ var app = express();
 
 console.log("Hello World");
 
+// Query string mounting
+app.get("/name", (req, res) => {
+    res.send({ name: req.query.first + " " + req.query.last })
+})
+
 // Echo server
 app.get("/:word/echo", (req, res) => {
     res.send({ echo: req.params.word })
